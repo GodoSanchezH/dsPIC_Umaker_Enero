@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Config.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=Config.c main.c LCD_dsPIC.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Config.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Config.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Config.o ${OBJECTDIR}/main.o ${OBJECTDIR}/LCD_dsPIC.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Config.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/LCD_dsPIC.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Config.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/Config.o ${OBJECTDIR}/main.o ${OBJECTDIR}/LCD_dsPIC.o
 
 # Source Files
-SOURCEFILES=Config.c main.c
+SOURCEFILES=Config.c main.c LCD_dsPIC.c
 
 
 
@@ -107,6 +107,12 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/a47cd031a13781108d72
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/LCD_dsPIC.o: LCD_dsPIC.c  .generated_files/flags/default/c9a20dc167e9dd0f6b4b40038648d067bc302039 .generated_files/flags/default/a733305486dba52bf1b2f0129eacaac696315869
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LCD_dsPIC.o.d 
+	@${RM} ${OBJECTDIR}/LCD_dsPIC.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  LCD_dsPIC.c  -o ${OBJECTDIR}/LCD_dsPIC.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/LCD_dsPIC.o.d"      -g -D__DEBUG     -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/Config.o: Config.c  .generated_files/flags/default/7e45ca03dc904608fd297b58cbf74ea23e8f6d00 .generated_files/flags/default/a733305486dba52bf1b2f0129eacaac696315869
 	@${MKDIR} "${OBJECTDIR}" 
@@ -119,6 +125,12 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/961d73f72bd6be460c82
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/LCD_dsPIC.o: LCD_dsPIC.c  .generated_files/flags/default/dbe5c968fd6806d630d58c1ecaa1ce62be765a81 .generated_files/flags/default/a733305486dba52bf1b2f0129eacaac696315869
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LCD_dsPIC.o.d 
+	@${RM} ${OBJECTDIR}/LCD_dsPIC.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  LCD_dsPIC.c  -o ${OBJECTDIR}/LCD_dsPIC.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/LCD_dsPIC.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

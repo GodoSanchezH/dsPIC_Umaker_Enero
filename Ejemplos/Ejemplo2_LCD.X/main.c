@@ -7,12 +7,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdint.h>
+#include "Config.h"
+#include <libpic30.h>
+#include <xc.h>
 /*
  * 
  */
 int main(int argc, char** argv) {
 
+    
+    for(;;){
+    
+    }
+    
+    
+    
     return (EXIT_SUCCESS);
 }
 
