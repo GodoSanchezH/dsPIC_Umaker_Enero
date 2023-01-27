@@ -9,7 +9,6 @@
 #define	LCD_DSPIC_H
 
 #include "Config.h"
-
 #include <stdint.h>
 
 #define E   LATBbits.LATB10
