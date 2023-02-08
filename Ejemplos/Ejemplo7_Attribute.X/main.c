@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
     
     for (i = 0; i < 5; i++) {
         printf("La direccion %u de la memoria y es igual 0x%X y su valor es %u\n\r",i,&(Y_memory_buffer[i]),Y_memory_buffer[i]);
-
+        
     }
     for(;;){
     

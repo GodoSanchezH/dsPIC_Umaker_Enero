@@ -1,0 +1,16 @@
+Simulacion X16
+******X MEMORY*******
+La direccion 0 de la memoria x es igual 0xBC2 y su valor es 0
+La direccion 1 de la memoria x es igual 0xBC4 y su valor es 1
+La direccion 2 de la memoria x es igual 0xBC6 y su valor es 2
+La direccion 3 de la memoria x es igual 0xBC8 y su valor es 3
+La direccion 4 de la memoria x es igual 0xBCA y su valor es 4
+
+
+******Y MEMORY*******
+La direccion 0 de la memoria y es igual 0xFEA y su valor es 5
+La direccion 1 de la memoria y es igual 0xFEC y su valor es 6
+La direccion 2 de la memoria y es igual 0xFEE y su valor es 7
+La direccion 3 de la memoria y es igual 0xFF0 y su valor es 8
+La direccion 4 de la memoria y es igual 0xFF2 y su valor es 9
+
