@@ -11,7 +11,7 @@
 #include <libpic30.h>
 #include <p33FJ32MC202.h>
 #include "Uart.h"
-
+#include "ADC.h"
 char caracter = 'a';
 uint16_t entero = 55;
 double p = 3.1416;
@@ -60,19 +60,21 @@ void __attribute__ ((interrupt,no_auto_psv)) _U1RXInterrupt(void){
     }
 IFS0bits.U1RXIF = 0;
 }
- 
+uint16_t adc_read[6];
 int main(int argc, char** argv) {
     TRISB &= ~((1<<15)|(1<<14)|(1<<13)|(1<<12));
+      ADC_Init(bits12);
     UART_dsPIC_Init(9600);
+  
     for(;;){
-
-        //UART_dsPIC_putS("Hola Bienvenidos\n\r");
-        //UART_dsPIC_putS("dsPIC umaker\n\r\n\r");
-       /*
-        printf("El caracter es :%c\n\r",caracter);
-        printf("El entero es :%u\n\r",entero);
-       // printf("El flotante es :%0.3f\n\r",p);
-        printf("El string es :%s\n\r\n\r",ss);*/
+        
+        adc_read[0] = AnalogRead(An0);
+        adc_read[1] = AnalogRead(An1);
+        adc_read[2] = AnalogRead(An2);
+        adc_read[3] = AnalogRead(An3);
+        adc_read[4] = AnalogRead(An4);
+        adc_read[5] = AnalogRead(An5);
+        printf("%u,%u,%u,%u,%u,%u\n\r",adc_read[0],adc_read[1],adc_read[2],adc_read[3],adc_read[4],adc_read[5]);
         __delay_ms(500);
     }
     
