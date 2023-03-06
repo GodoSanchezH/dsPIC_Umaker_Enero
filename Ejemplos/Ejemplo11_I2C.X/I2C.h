@@ -10,6 +10,14 @@
 
 #include <stdint.h>
 
+#define PCF_Unidades  0b0100000
+#define PCF_Decenas   0b0100110
+#define PCF_Centenas  0b0100011
+
+
+#define I2C_ACK 0b00000000
+#define I2C_nACK 0b00000001
+
 #define I2C_Write 0b00000000
 #define I2C_Read  0b00000001
 //funciones

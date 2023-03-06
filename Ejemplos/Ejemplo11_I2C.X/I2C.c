@@ -39,6 +39,25 @@ void I2C_Write_Data_Slave(uint8_t data){
 }
 
 void I2C_Read_data(uint8_t *ptr_data,uint8_t var_ack_nack){
+    I2C1CONbits.ACKEN = 0;
+    I2C1CONbits.RCEN = 1;
+    
+    if (var_ack_nack == I2C_ACK) {
+
+        while ( I2C1CONbits.RCEN == 1);
+        *ptr_data = I2C1RCV;
+        I2C1CONbits.ACKDT = 0;//prearamos el ack
+        I2C1CONbits.ACKEN =1;//hacemos el envio
+        while( I2C1CONbits.ACKEN ==1);
+    }
+    else if (var_ack_nack == I2C_nACK) {
+        while ( I2C1CONbits.RCEN == 1);
+        *ptr_data = I2C1RCV;
+        I2C1CONbits.ACKDT = 1;//prearamos el nack
+        I2C1CONbits.ACKEN =1;//hacemos el envio
+        while( I2C1CONbits.ACKEN ==1);
+    }
+
 
     
     
