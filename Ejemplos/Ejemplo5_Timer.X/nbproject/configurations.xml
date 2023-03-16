@@ -37,7 +37,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.70</languageToolchainVersion>
+        <languageToolchainVersion>2.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
