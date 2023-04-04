@@ -63,21 +63,7 @@ int main(void)
     ADC1_Enable();
     while (1)
     {
-//        if (!Boton_GetValue()) {
-//            Led_SetLow();
-//        }
-//        else Led_SetHigh();
-        Led_Toggle();
-        ADC1_ChannelSelect(POT1);
-        ADC1_SoftwareTriggerEnable();
-        //Provide Delay
-        __delay_ms(1);
-       
-        //while(!ADC1_IsConversionComplete(POT1));
-        conversion = ADC1_ConversionResultGet(POT1);
-         ADC1_SoftwareTriggerDisable();
-        printf("dspic -> %u\n\r",conversion);
-        
+
         __delay_ms(100);
         
     }
